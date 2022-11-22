@@ -2,3 +2,5 @@
 <p>Find me in app/views/listings/show.html.erb</p>
 
 <%= @listing.description %>
+
+<%= cl_image_tag @listing.photo.key, height: 300, width: 400, crop: :fill %>
