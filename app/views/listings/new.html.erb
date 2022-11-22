@@ -1,2 +1,16 @@
-<h1>Listings#new</h1>
-<p>Find me in app/views/listings/new.html.erb</p>
+<h1>Make a new listing</h1>
+<p>Fill in the form below to add you dog to the index</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <%= simple_form_for(@listing) do |f| %>
+        <%= f.input :name, placeholder: 'Add a list name' %>
+        <%= f.input :breed, placeholder: 'Add a list name' %>
+        <%= f.input :description, placeholder: 'Add a list name' %>
+        <%= f.input :price, placeholder: '0' %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
