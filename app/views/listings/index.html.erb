@@ -1,0 +1,15 @@
+<h1>Animal Listings</h1>
+
+<%= @listings.each do |listing| %>
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title"><%= listing.name %></h5>
+      <h6 class="card-title">£<%= listing.price %></h6>
+      <h6 class="card-title"><%= listing.breed %></h6>
+      <div class="btn btn-primary">
+        <%= link_to "More Information", listing_path(listing)%>
+      </div>
+    </div>
+  </div>
+<% end %>
