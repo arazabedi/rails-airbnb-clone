@@ -40,4 +40,3 @@ end
 def listing_params
   params[:listing].permit(:title, :price, :description, :capacity, :is_available, :has_captain, :license_plate, :photo, :address)
 end
-end

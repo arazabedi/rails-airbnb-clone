@@ -1,2 +1,17 @@
 <h1>Listings#index</h1>
 <p>Find me in app/views/listings/index.html.erb</p>
+
+<% @listings.each do |pet| %>
+<li><a href="/listings/<%=listing.id%>"><%= pet.name %></a></li>
+<% end %>
+
+
+<% @listings.each do |listing| %>
+    <li>
+      <a href="/listings/<%=listing.id%>" class='animal-card d-flex flex-column'>
+        <p><%= listing.name %></p>
+        <p><%= listing.price %></p>
+        <p>£<%= listing.breed %></p>
+      </a>
+    </li>
+    <% end %>
