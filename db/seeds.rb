@@ -15,6 +15,6 @@ end
 require "open-uri"
 
 file = URI.open("https://dog.ceo/api/breeds/image/random/50")
-listing = Listing.new(title: "NES", body: "A great console")
-listing.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+listing = Listing.new
+listing.photo.attach(io: file, filename: "dogs.jpg", content_type: "image/jpg")
 listing.save

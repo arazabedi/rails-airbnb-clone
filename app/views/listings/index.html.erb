@@ -16,6 +16,8 @@
 
 
 
-<% @listing.photos.each do |photo| %>
-  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-  <% end %>
+<%# url(<%= listing.photo.attached? ? cl_image_path(listing.photo.key) : asset_path('listing_background.jpg') %>)"> %>
+
+<%# <% @listing.photos.each do |photo| %>
+  <%# <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %> %>
+  <%# <% end %>
