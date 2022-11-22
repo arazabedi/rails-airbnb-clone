@@ -1,15 +1,8 @@
 Rails.application.routes.draw do
-  get 'listings/index'
-  get 'listings/show'
-  get 'listings/new'
-  get 'listings/create'
-  get 'listings/destroy'
-  devise_for :users
-  root to: "pages#home"
+  get 'users/name'
+  get 'users/email'
 
-  get "pets", to: "pets#index"
-
-  get "pets/:id", to: "pets#show", as: :pet
+resources :listings, :users, :rentals
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

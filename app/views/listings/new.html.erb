@@ -1,24 +1,16 @@
-<h1>Listings#new</h1>
-<p>Find me in app/views/listings/new.html.erb</p>
+<h1>Make a new listing</h1>
+<p>Fill in the form below to add you dog to the index</p>
 
-<div class="rendered-form">
-    <div class="formbuilder-text form-group field-text-1669127534082">
-        <label for="text-1669127534082" class="formbuilder-text-label">Name</label>
-        <input type="text" placeholder="Rex" class="form-control" name="text-1669127534082" access="false" id="text-1669127534082">
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <%= simple_form_for(@listing) do |f| %>
+        <%= f.input :name, placeholder: 'Add a list name' %>
+        <%= f.input :breed, placeholder: 'Add a list name' %>
+        <%= f.input :description, placeholder: 'Add a list name' %>
+        <%= f.input :price, placeholder: '0' %>
+        <%= f.submit %>
+      <% end %>
     </div>
-    <div class="formbuilder-text form-group field-text-1669127577647">
-        <label for="text-1669127577647" class="formbuilder-text-label">Breed</label>
-        <input type="text" placeholder="French Bulldog" class="form-control" name="text-1669127577647" access="false" id="text-1669127577647">
-    </div>
-    <div class="formbuilder-textarea form-group field-textarea-1669127610158">
-        <label for="textarea-1669127610158" class="formbuilder-textarea-label">Description</label>
-        <textarea type="textarea" placeholder="Dog behaviour, likes, dislikes..." class="form-control" name="textarea-1669127610158" access="false" id="textarea-1669127610158"></textarea>
-    </div>
-    <div class="formbuilder-number form-group field-number-1669127661845">
-        <label for="number-1669127661845" class="formbuilder-number-label">Price</label>
-        <input type="number" placeholder="0" class="form-control" name="number-1669127661845" access="false" id="number-1669127661845">
-    </div>
-    <div class="formbuilder-button form-group field-button-1669127724079">
-        <button type="button" class="btn-default btn" name="button-1669127724079" access="false" style="default" id="button-1669127724079">Submit</button>
-    </div>
+  </div>
 </div>
