@@ -5,6 +5,8 @@ ruby "3.1.2"
 
 gem 'devise'
 
+gem "cloudinary"
+
 gem "dotenv-rails", groups: [:development, :test]
 
 gem 'faker'
