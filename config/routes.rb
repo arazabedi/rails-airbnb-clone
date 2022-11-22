@@ -8,6 +8,10 @@ resources :listings, :users, :rentals
 
   # Defines the root path route ("/")
   # root "articles#index"
+<<<<<<< HEAD
 
 
+=======
+  resources :user, :listing, :listing
+>>>>>>> devise
 end
