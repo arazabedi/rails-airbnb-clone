@@ -14,7 +14,6 @@ class ListingsController < ApplicationController
   def create
     @listing = Listing.new(listing_params)
     @listing.user = current_user
-    authorize @listing
     if @listing.save
       redirect_to listing_path(@listing)
     else
@@ -38,5 +37,5 @@ def set_listing
 end
 
 def listing_params
-  params[:listing].permit(:title, :price, :description, :capacity, :is_available, :has_captain, :license_plate, :photo, :address)
+  params[:listing].permit(:name, :breed, :price, :description)
 end
