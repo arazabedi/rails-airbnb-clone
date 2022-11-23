@@ -2,3 +2,15 @@
 
 <%= cl_image_tag @listing.photo.key, height: 300, width: 400, crop: :fill %>
 <%= @listing.description %>
+
+<h1>Book a Pet!</h1>
+<p>Fill in the form below to rent your dog of choice</p>
+
+<%= simple_form_for(@listing, @rental) do |f| %>
+<%= f.input :first_name %>
+<%= f.input :last_name %>
+<%= f.input :email %>
+<%= f.input :start_date %>
+<%= f.input :end_date %>
+<%= f.submit “Confirm my booking”, class: “btn btn-danger btn-lg” %>
+<% end %>
