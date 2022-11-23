@@ -9,6 +9,9 @@ require 'faker'
 require "open-uri"
 require "json"
 
+# Listing.destroy_all
+# User.destroy_all
+
 user1 = User.create(email: "araz@tess.com", password: "1234567", password_confirmation: '1234567')
 25.times do
   doggo = Listing.new(user:user1, name: "#{Faker::Creature::Dog.name}", breed: "#{Faker::Creature::Dog.breed}", description: "#{Faker::Creature::Dog.meme_phrase}", price: "#{Faker::Number.decimal(l_digits: 3, r_digits: 2)}")
