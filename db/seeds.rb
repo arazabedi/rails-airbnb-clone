@@ -6,15 +6,17 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 require 'faker'
-
-user1 = User.create(email: "araz@tess.com", password: "1234567")
-50.times do
-  Listing.create!(user:user1, name: "#{Faker::Creature::Dog.name}", breed: "#{Faker::Creature::Dog.breed}", description: "#{Faker::Creature::Dog.meme_phrase}", price: "#{Faker::Number.decimal(l_digits: 3, r_digits: 2)}")
-end
-
 require "open-uri"
+require "json"
 
-file = URI.open("https://dog.ceo/api/breeds/image/random/50")
-listing = Listing.new
-listing.photo.attach(io: file, filename: "dogs.jpg", content_type: "image/jpg")
-listing.save
+user1 = User.create(email: "araz@tess.com", password: "1234567", password_confirmation: '1234567')
+25.times do
+  doggo = Listing.new(user:user1, name: "#{Faker::Creature::Dog.name}", breed: "#{Faker::Creature::Dog.breed}", description: "#{Faker::Creature::Dog.meme_phrase}", price: "#{Faker::Number.decimal(l_digits: 3, r_digits: 2)}")
+  file = URI.open("https://dog.ceo/api/breeds/image/random/1").read
+  file_json = JSON.parse(file)
+  image_link = file_json["message"][0]
+  puts "doggo image --> #{image_link}"
+  image = URI.open(image_link)
+  doggo.photo.attach(io: image, filename: "dogs.jpg", content_type: "image/jpg")
+  doggo.save
+end
