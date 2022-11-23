@@ -13,11 +13,14 @@ class RentalsController < ApplicationController
 
   def create
     @rental = Rental.new(rental_params)
+    @listing = Listing.find(params[:listing_id])
     @rental.user = current_user
-    if @rental.save
-      redirect_to rental_path(@rental)
+    @rental.listing = @listing
+    if @rental.save!
+      # redirect_to listing_path(@listing)
+      redirect_to root_path
     else
-      render :new
+      render :new, status: :unprocessed_entity
     end
   end
 
@@ -28,6 +31,11 @@ class RentalsController < ApplicationController
       render :index
     end
   end
-end
 
-private
+  private
+
+  def rental_params
+    params.require(:rental).permit(:start_date, :end_date)
+  end
+
+end
