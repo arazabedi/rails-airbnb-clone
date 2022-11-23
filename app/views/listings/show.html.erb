@@ -1,4 +1,4 @@
-<h1>Show of selected animal listing:</h1>
-<p>Find me in app/views/listings/show.html.erb</p>
+<h1>Dog Rental Selection:</h1>
 
+<%= cl_image_tag @listing.photo.key, height: 300, width: 400, crop: :fill %>
 <%= @listing.description %>

@@ -37,5 +37,5 @@ def set_listing
 end
 
 def listing_params
-  params[:listing].permit(:name, :breed, :price, :description)
+  params[:listing].permit(:name, :breed, :price, :description, :photo)
 end
