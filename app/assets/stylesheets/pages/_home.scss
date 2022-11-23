@@ -1,1 +1,22 @@
 // Specific CSS for your home-page
+
+h1 {
+  margin: 1em;
+}
+
+.txt_black {
+  color: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5em;
+  justify-items: center;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}

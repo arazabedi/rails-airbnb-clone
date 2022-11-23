@@ -15,11 +15,12 @@ class ListingsController < ApplicationController
     @listing = Listing.new(listing_params)
     @listing.user = current_user
     if @listing.save
-      redirect_to listing_path(@listing)
-    else
-      render :new
-    end
+    redirect_to listing_path(@listing)
+  else
+    render :new
   end
+  end
+
 
   def destroy
     if @listing.destroy
@@ -33,7 +34,7 @@ end
 private
 
 def set_listing
-  @boat = Listing.find(params[:id])
+  @listing = Listing.find(params[:id])
 end
 
 def listing_params

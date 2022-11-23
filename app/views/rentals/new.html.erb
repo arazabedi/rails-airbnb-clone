@@ -1,0 +1,9 @@
+<h1>Book a Pet!</h1>
+<p>Fill in the form below to rent your dog of choice</p>
+
+<%= simple_form_for(@rental) do |f| %>
+<%= f.input :user %>
+<%= f.input :start_date %>
+<%= f.input :end_date %>
+<%= f.submit %>
+<% end %>
