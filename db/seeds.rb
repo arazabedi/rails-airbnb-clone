@@ -22,9 +22,9 @@
 #   doggo.save
 # end
 
-
-# Listing.destroy_all
-# User.destroy_all
+Rental.destroy_all
+Listing.destroy_all
+User.destroy_all
 
 user1 = User.create(email: "araz@tess.com", password: "1234567", password_confirmation: '1234567')
 25.times do
@@ -39,4 +39,3 @@ user1 = User.create(email: "araz@tess.com", password: "1234567", password_confir
 end
 
 Rental.create(start_date: Date.new(), end_date: Date.new(), user: User.last, listing: Listing.last)
-

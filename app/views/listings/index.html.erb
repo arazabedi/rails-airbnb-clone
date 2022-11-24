@@ -12,8 +12,9 @@
       <h5 class="card-title"><%= listing.name %></h5>
       <h6 class="card-title">£<%= listing.price %></h6>
       <h6 class="card-title"><%= listing.breed %></h6>
-      <div class="btn btn-primary">
-        <%= link_to "More Information", listing_path(listing) %>
+      <button type="button" class="btn btn-info"> <%= link_to "More Information", listing_path(listing) %>
+</button>
+
       </div>
     </div>
   </div>
