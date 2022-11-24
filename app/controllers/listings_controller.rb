@@ -1,7 +1,12 @@
 class ListingsController < ApplicationController
   def index
+    if params[:query].present?
+    @listings = Listing.where("breed ILIKE ?", "%#{params[:query]}%")
+  else
     @listings = Listing.all
   end
+  end
+
 
   def show
     @listing = Listing.find(params[:id])
