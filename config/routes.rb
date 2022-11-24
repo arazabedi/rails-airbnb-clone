@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "listings#index"
+  root to: "pages#home"
 
   resources :listings do
     resources :rentals, only: [:create]

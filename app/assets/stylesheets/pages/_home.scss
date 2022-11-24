@@ -4,6 +4,46 @@ h1 {
   margin: 1em;
 }
 
+.homewrap {
+  background-color: rgba(202, 112, 169, 0.3) ;
+  box-shadow: rgba(255, 227, 224, 0.2) 30px 7px 29px 0px;
+  width: 700px;
+  margin: 0 auto;
+  border-radius: 35px;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-style: ExtraLight 200 Italic;
+  font-size: 40px;
+}
+
+#welcs1 {
+  margin-top: 6.5em;
+  margin-bottom: 0;
+}
+
+#welcs2 {
+  margin-top: 0;
+  margin-bottom: 1em;
+  }
+
+#searchy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 800px;
+}
+
+.navbar-brand {
+  font-family: 'Raleway', sans-serif;
+}
+
 .txt_black {
   color: white;
 }
@@ -33,4 +73,8 @@ h1 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
 }
