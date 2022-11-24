@@ -18,7 +18,7 @@ class RentalsController < ApplicationController
     @rental.listing = @listing
     if @rental.save!
       # redirect_to listing_path(@listing)
-      redirect_to root_path
+      redirect_to confirmation_page_path
     else
       render :new, status: :unprocessed_entity
     end
