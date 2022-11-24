@@ -4,77 +4,118 @@ h1 {
   margin: 1em;
 }
 
-.homewrap {
-  background-color: rgba(202, 112, 169, 0.3) ;
-  box-shadow: rgba(255, 227, 224, 0.2) 30px 7px 29px 0px;
-  width: 700px;
+
+body {
+  background-image: url('https://images.pexels.com/photos/933498/pexels-photo-933498.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-image: url();
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+
+
+
+
+// .homewrap {
+//   background-color: rgba(202, 112, 169, 0.3) ;
+//   box-shadow: rgba(255, 227, 224, 0.2) 30px 7px 29px 0px;
+//   width: 1000px;
+//   height: 250px;
+//   margin: 0 auto;
+//   border-radius: 35px;
+// }
+
+// .welcome {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   color: white;
+//   font-family: 'Raleway', sans-serif;
+//   font-style: ExtraLight 200 Italic;
+//   font-size: 40px;
+// }
+
+// #welcs1 {
+//   margin-top: 6.5em;
+//   margin-bottom: 0;
+// }
+
+// #welcs2 {
+//   margin-top: 0;
+//   margin-bottom: 1em;
+//   }
+
+// #searchy {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   margin-bottom: 800px;
+// }
+
+// .navbar-brand {
+//   font-family: 'Raleway', sans-serif;
+// }
+
+// .txt_black {
+//   color: white;
+// }
+
+// .grid {
+//   display: grid;
+//   grid-template-columns: repeat(4, 1fr);
+//   gap: 1.5em;
+//   justify-items: center;
+// }
+
+// .card-img-top {
+//   width: 100%;
+//   height: 200px;
+//   width: 100%;
+//   object-fit:cover;
+// }
+
+// .card {
+//   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+// }
+
+// .show_wrapper {
+//   height: 100%;
+//   padding: 0;
+//   margin: 0;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   flex-direction: column;
+// }
+
+// footer {
+//   margin-top: auto;
+// }
+
+
+
+
+
+
+
+
+// cards for index pupperino
+.card-container {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
+  width: fit-content;
+  height: fit-content;
   border-radius: 35px;
 }
 
-.welcome {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-family: 'Raleway', sans-serif;
-  font-style: ExtraLight 200 Italic;
-  font-size: 40px;
-}
-
-#welcs1 {
-  margin-top: 6.5em;
-  margin-bottom: 0;
-}
-
-#welcs2 {
-  margin-top: 0;
-  margin-bottom: 1em;
-  }
-
-#searchy {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 800px;
-}
-
-.navbar-brand {
-  font-family: 'Raleway', sans-serif;
-}
-
-.txt_black {
-  color: white;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5em;
-  justify-items: center;
-}
-
-.card-img-top {
-  width: 100%;
-  height: 200px;
-  object-fit:cover;
-}
-
 .card {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-}
-
-.show_wrapper {
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-footer {
-  margin-top: auto;
+  background-color: rgba(255, 255, 255, 0.311);
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 30px;
+  padding: 25px;
+  box-shadow: 0px 0px 0px 4px #D5F9DE;
 }
