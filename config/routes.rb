@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   get "contact_us", to: "pages#contact_us"
   get "about", to: "pages#about"
+  get "home", to: "pages#home"
 
   # get "listings/:id", to "listings#show", as: :listing
 end
