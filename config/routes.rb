@@ -11,7 +11,6 @@ Rails.application.routes.draw do
   get "about", to: "pages#about"
 
   get "confirmation_page", to: "pages#confirmation_page"
-
   get "home", to: "pages#home"
 
   # get "listings/:id", to "listings#show", as: :listing
