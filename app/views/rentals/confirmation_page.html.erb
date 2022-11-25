@@ -12,10 +12,11 @@ body {
   font-style: ExtraLight 200 Italic;
 }
 </style>
-
-<h1>Booking Confirmed!</h1>
-
-<%=@rental.start_date %>
-<%=@rental.end_date %>
-<%=@rental.listing.name%>
-<a href="/home" class="btn btn-primary">Back to Home</a>
+<div class='container vh-100 confirmation-wrapper'>
+  <div class='bg-white rounded p-4 confirmation-wrapper'>
+    <h1>Booking Confirmed!</h1>
+    <%=@rental.start_date.strftime("%d/%m/%Y") %> - <%=@rental.end_date.strftime("%d/%m/%Y")  %> <br>
+    <%=@rental.listing.name%>
+    <a href="/home" class="btn btn-primary">Back to Home</a>
+  </div>
+</div>

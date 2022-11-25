@@ -38,6 +38,13 @@ body {
 .search-btn {
   margin-left: 15px;
 }
+
+.confirmation-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 .homewrapper {
   display: flex;
   align-items: center;
@@ -117,18 +124,19 @@ margin-left: 40%;
 margin-top: 100px;
 }
 
-#showbottom {
-  margin-bottom: 300px;
+.imageanddescription {
+    display: flex;
+//   margin-bottom: 205px;
+//   justify-content: space-between;
+//   align-items: center;
+//   margin-left: 425px;
+//   margin-right: 425px;
+//   margin-top: 5em;
 }
 
-.imageanddescription {
-  margin-bottom: 205px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 425px;
-  margin-right: 425px;
-  margin-top: 5em;
+#left img {
+  height: 700px;
+  width: 600px;
 }
 
 

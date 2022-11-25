@@ -1,15 +1,7 @@
-<style>
-body {
-  background-color: #faeeed;
-  font-family: 'Raleway', sans-serif;
-  font-style: ExtraLight 200 Italic;
-}
-</style>
-
-<div class="showall">
-  <section id="showtop">
-    <h1>Book a Pet!</h1>
-    <p>Fill in the form below to rent your dog of choice</p>
+<div class="h-100" style="background-color: #faeeed;">
+  <section>
+    <h1 class="pt-4" style='margin-top: 0px;'>Book a Pet!</h1>
+    <p style="padding-left: 20px; text-align: left;">Fill in the form below to rent your dog of choice</p>
   </section>
 
   <section id="showbottom">
@@ -17,13 +9,13 @@ body {
 
       <div id="left">
         <div id="im">
-          <%= cl_image_tag @listing.photo.key, height: 300, width: 400, crop: :fill %>
+          <%= cl_image_tag @listing.photo.key %>
         </div>
       </div>
 
-      <div id="right">
-        <div id="description">
-          <%= @listing.description %>
+      <div id="right" class="px-3">
+        <div id="description" class="mb-5">
+          <%= "I am a feisty little dog. I bark at dogs three times my size even though they could crush me. My favorite thing to do is have cuddles by a warm fire. I am terrified of cats, and if I see one while walking, I will probably run away. I’m a BIG fan of hot dogs. No, that's not cannibalism" %>
         </div>
 
         <div id="form">
@@ -36,9 +28,9 @@ body {
           <% end %>
         </div>
 
-        <div id="linkback">
+        <div id="linkback" class="mt-3">
           <%= link_to listings_path do %>
-          <i class="fa-solid fa-arrow-rotate-left"> Back to Feed </i>
+            <i class="fa-solid fa-arrow-rotate-left">Back to Feed</i>
           <% end %>
         </div>
       </div>
