@@ -7,6 +7,7 @@ body {
 <section id="listingtop">
   <h1>Dogs Available to Rent:</h1>
 
+
   <%= form_with url: listings_path, method: :get, class: "d-flex" do %>
     <%= text_field_tag :query,
       params[:query],
