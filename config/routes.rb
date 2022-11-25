@@ -10,7 +10,8 @@ Rails.application.routes.draw do
   get "contact_us", to: "pages#contact_us"
   get "about", to: "pages#about"
 
-  get "confirmation_page", to: "pages#confirmation_page"
+
+get "confirmation/:id", to: "rentals#confirmation_page", as: :confirmation
   get "home", to: "pages#home"
 
   # get "listings/:id", to "listings#show", as: :listing

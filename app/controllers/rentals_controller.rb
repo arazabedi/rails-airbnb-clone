@@ -18,10 +18,14 @@ class RentalsController < ApplicationController
     @rental.listing = @listing
     if @rental.save!
       # redirect_to listing_path(@listing)
-      redirect_to confirmation_page_path
+      redirect_to confirmation_path(@rental)
     else
       render :new, status: :unprocessed_entity
     end
+  end
+
+  def confirmation_page
+    @rental = Rental.find(params[:id])
   end
 
   def destroy
