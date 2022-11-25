@@ -1,25 +1,19 @@
-<style>
-body {
-  /* background-image: url('https://images.pexels.com/photos/933498/pexels-photo-933498.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); */
-  background-color: #FAF2F1;
-}
-</style>
+<div class= "home-container" style='height: 100vh; background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");'>
+  <div class="container h-100 homewrapper">
 
-<div class="homewrap">
+      <p class="welcome" >Wanna know who let the dogs out?</p>
+      <p class="welcome">Look no further</p>
 
-    <p class="welcome" id="welcs1">Wanna know who let the dogs out?</p><br>
-    <p class="welcome" id="welcs2">Look no further</p>
+      <%= form_with url: listings_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Search a dog breed"
+        %>
+        <%= submit_tag "Search", class: "btn btn-primary search-btn" %>
+      <% end %>
 
+  </div>
 
-  <section id="searchy">
-    <%= form_with url: listings_path, method: :get, class: "d-flex" do %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Search a dog breed"
-      %>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
-    <% end %>
-  </section>
 
 </div>

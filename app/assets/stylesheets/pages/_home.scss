@@ -10,14 +10,18 @@ body {
   // background-color: #FAF2F1;
 }
 
-
-.homewrap {
-  background-color: rgba(121, 137, 101, 0.3) ;
-  box-shadow: rgba(22, 22, 22, 0.2) 30px 30px 29px 27px;
-  width: 1000px;
-  margin: 0 auto;
-  border-radius: 35px;
+.home-container {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-size: cover;
 }
+
+// .homewrap {
+//   background-color: rgba(121, 137, 101, 0.3) ;
+//   box-shadow: rgba(22, 22, 22, 0.2) 30px 30px 29px 27px;
+//   width: 1000px;
+//   margin: 0 auto;
+//   border-radius: 35px;
+// }
 
 .welcome {
   display: flex;
@@ -28,10 +32,19 @@ body {
   font-family: 'Raleway', sans-serif;
   font-style: ExtraLight 200 Italic;
   font-size: 40px;
+  margin-bottom: 0px;
 }
 
+.search-btn {
+  margin-left: 15px;
+}
+.homewrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 #welcs1 {
-  margin-top: 9em;
   margin-bottom: 0;
   padding-top: 1.5em;
 }
@@ -43,7 +56,6 @@ body {
 
 #searchy {
   margin-bottom: 800px;
-  margin-bottom: 500px;
   padding: 70px;
 }
 
