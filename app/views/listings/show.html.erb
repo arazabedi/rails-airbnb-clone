@@ -1,29 +1,45 @@
-<div class="show_wrapper">
+<style>
+body {
+  background-color: #faeeed;
+}
+</style>
 
-  <h1>Book a Pet!</h1>
-  <p>Fill in the form below to rent your dog of choice</p>
+<div class="showall">
+  <section id="showtop">
+    <h1>Book a Pet!</h1>
+    <p>Fill in the form below to rent your dog of choice</p>
+  </section>
 
-  <div class="card" style="width: 18rem;">
-  <img class="card-img-top" <%= cl_image_tag @listing.photo.key, height: 300, width: 400, crop: :fill %>>
-  <div class="card-body">
-  <h5 class="card-title"> <%= @listing.description %> </h5>
-  </div>
+  <section id="showbottom">
+    <div class="imageanddescription">
 
+      <div id="left"">
+        <div id="im">
+          <%= cl_image_tag @listing.photo.key, height: 300, width: 400, crop: :fill %>
+        </div>
+      </div>
 
-    <hr>
-    <%= link_to listings_path do %>
-      <i class="fa-solid fa-arrow-rotate-left"> Back to Feed </i>
-    <% end %>
-  </div>
+      <div id="right">
+        <div id="description">
+          <%= @listing.description %>
+        </div>
 
+        <div id="form">
+          <%= simple_form_for [@listing, @rental] do |f| %>
+          <%= f.input :start_date %>
+          <%= f.input :end_date %>
+          <%= f.submit "Confirm my booking", class: "btn btn-primary btn-lg" %>
+          <%# <%= link_to "Confirm my Booking", rental_path(rental) %>
+          <%# http://localhost:3000/confirmation_page %>
+          <% end %>
+        </div>
 
-
-  <%= simple_form_for [@listing, @rental] do |f| %>
-
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
-  <%= f.submit "Confirm my booking", class: "btn btn-primary btn-lg" %>
-  <%# <%= link_to "Confirm my Booking", rental_path(rental) %>
-   <%# http://localhost:3000/confirmation_page %>
-  <% end %>
+        <div id="linkback">
+          <%= link_to listings_path do %>
+          <i class="fa-solid fa-arrow-rotate-left"> Back to Feed </i>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
