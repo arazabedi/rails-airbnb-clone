@@ -1,19 +1,15 @@
 <div class= "home-container" style='height: 100vh; background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");'>
   <div class="container h-100 homewrapper">
+    <p class="welcome" >Wanna know who let the dogs out?</p>
+    <p class="welcome">Look no further</p>
 
-      <p class="welcome" >Wanna know who let the dogs out?</p>
-      <p class="welcome">Look no further</p>
-
-      <%= form_with url: listings_path, method: :get, class: "d-flex" do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Search a dog breed"
-        %>
-        <%= submit_tag "Search", class: "btn btn-primary search-btn" %>
-      <% end %>
-
+    <%= form_with url: listings_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Search a dog breed"
+      %>
+      <%= submit_tag "Search", class: "btn btn-primary search-btn" %>
+    <% end %>
   </div>
-
-
 </div>

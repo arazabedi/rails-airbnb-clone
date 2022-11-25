@@ -8,9 +8,14 @@
 <style>
 body {
   background-color: #faeeed;
+  font-family: 'Raleway', sans-serif;
+  font-style: ExtraLight 200 Italic;
 }
 </style>
 
 <h1>Booking Confirmed!</h1>
 
+<%=@rental.start_date %>
+<%=@rental.end_date %>
+<%=@rental.listing.name%>
 <a href="/home" class="btn btn-primary">Back to Home</a>
