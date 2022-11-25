@@ -10,11 +10,11 @@ body {
   <p>Fill in the form below to rent your dog of choice</p>
 
   <div class="card" style="width: 18rem;">
-  <img class="card-img-top" <%= cl_image_tag @listing.photo.key, height: 300, width: 400, crop: :fill %>>
+  <img class="card-img-top" <%= cl_image_tag @listing.photo.key, height: 300, width: 400, crop: :fill %>
   <div class="card-body">
-  <h5 class="card-title"> <%= @listing.description %> </h5>
+  <h5 class="card-title"> <%= "I am a feisty little dog. I bark at dogs three times my size even though they could crush me. I am terrified of cats, and if I see one while walking, I will probably run away. I’m a BIG fan of hot dogs. No, that's not cannibalism.
+" %> </h5>
   </div>
-
 
     <hr>
     <%= link_to listings_path do %>
@@ -29,7 +29,5 @@ body {
   <%= f.input :start_date %>
   <%= f.input :end_date %>
   <%= f.submit "Confirm my booking", class: "btn btn-primary btn-lg" %>
-  <%# <%= link_to "Confirm my Booking", rental_path(rental) %>
-   <%# http://localhost:3000/confirmation_page %>
   <% end %>
 </div>

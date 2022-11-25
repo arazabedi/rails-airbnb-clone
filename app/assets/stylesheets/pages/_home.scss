@@ -6,11 +6,8 @@ h1 {
 
 
 body {
-  // background-image: url('https://images.pexels.com/photos/933498/pexels-photo-933498.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
-  // background-repeat: no-repeat;
-  // background-size: cover;
   text-align: center;
-  background-color: #FAF2F1;
+  // background-color: #FAF2F1;
 }
 
 
@@ -44,13 +41,10 @@ body {
   margin-bottom: 1em;
   }
 
-// #searchy {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   margin-bottom: 800px;
-// }
-//dont think we need this
+#searchy {
+  margin-bottom: 800px;
+}
+
 
 .navbar-brand {
   font-family: 'Raleway', sans-serif;
