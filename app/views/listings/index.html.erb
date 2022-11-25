@@ -16,23 +16,24 @@ body {
       class: "form-control",
       placeholder: "Search a dog breed"
     %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
+    <%= submit_tag "Search", class: "btn btn-primary search-btn" %>
   <% end %>
 </section>
-
-<section class="grid">
-<% @listings.each do |listing| %>
-    <div class="card" style="width: 18rem;">
-      <% if listing.photo.key %>
-        <a href="<%=listing_path(listing)%>"><img class="card-img-top" src="<%= cl_image_path listing.photo.key%>" alt="Card image cap"></a>
-      <% else %>
-        <a href="<%=listing_path(listing)%>"><img src="https://media.istockphoto.com/id/1180989037/vector/cartoon-cute-beagle-puppy-vector-character-mascot.jpg?s=612x612&w=0&k=20&c=MLy9ynEYeJNQVUWk4SdESllseqmv0E1zSTeVtrFRRzQ=" alt="card image cap" class="class-img-top"></a>
+  <div class="container vh-100">
+    <div class="grid">
+      <% @listings.each do |listing| %>
+          <div class="card" style="width: 18rem;">
+            <% if listing.photo.key %>
+              <a href="<%=listing_path(listing)%>"><img class="card-img-top" src="<%= cl_image_path listing.photo.key%>" alt="Card image cap"></a>
+            <% else %>
+              <a href="<%=listing_path(listing)%>"><img src="https://media.istockphoto.com/id/1180989037/vector/cartoon-cute-beagle-puppy-vector-character-mascot.jpg?s=612x612&w=0&k=20&c=MLy9ynEYeJNQVUWk4SdESllseqmv0E1zSTeVtrFRRzQ=" alt="card image cap" class="class-img-top"></a>
+            <% end %>
+              <div class="pop">
+                <p class="card-title"><%= listing.name %></p>
+                <p class="card-title">£<%= listing.price %></p>
+                <p class="card-title"><%= listing.breed %></p>
+              </div>
+          </div>
       <% end %>
-        <div class="pop">
-          <p class="card-title"><%= listing.name %></p>
-          <p class="card-title">£<%= listing.price %></p>
-          <p class="card-title"><%= listing.breed %></p>
-        </div>
     </div>
-<% end %>
-</section>>
+  </div>
