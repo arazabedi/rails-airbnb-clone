@@ -12,10 +12,9 @@ body {
 
 
 .homewrap {
-  background-color: rgba(202, 112, 169, 0.3) ;
-  box-shadow: rgba(255, 227, 224, 0.2) 30px 7px 29px 0px;
+  background-color: rgba(121, 137, 101, 0.3) ;
+  box-shadow: rgba(22, 22, 22, 0.2) 30px 30px 29px 27px;
   width: 1000px;
-  height: 250px;
   margin: 0 auto;
   border-radius: 35px;
 }
@@ -34,15 +33,18 @@ body {
 #welcs1 {
   margin-top: 9em;
   margin-bottom: 0;
+  padding-top: 1.5em;
 }
 
 #welcs2 {
   margin-top: 0;
-  margin-bottom: 1em;
+  margin-bottom: 0.1em;
   }
 
 #searchy {
   margin-bottom: 800px;
+  margin-bottom: 500px;
+  padding: 70px;
 }
 
 
@@ -68,22 +70,53 @@ body {
   object-fit:cover;
 }
 
-.card {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-}
-
-.show_wrapper {
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
 footer {
   margin-top: auto;
+}
+
+// cards for index pupperino
+.card-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 35px;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.311);
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 30px;
+  padding: 25px;
+  box-shadow: rgba(198, 114, 163, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#listingtop {
+  margin-top: 0.2em;
+  margin-bottom: 1.95em;
+  width:500px;
+  padding-left: 65px;
+}
+
+#showtop {
+margin-left: 40%;
+margin-top: 100px;
+}
+
+#showbottom {
+  margin-bottom: 300px;
+}
+
+.imageanddescription {
+  margin-bottom: 205px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 425px;
+  margin-right: 425px;
+  margin-top: 5em;
 }
 
 
